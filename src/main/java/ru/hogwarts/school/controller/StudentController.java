@@ -19,6 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @RestController
 @RequestMapping("/student")
@@ -74,6 +75,13 @@ public class StudentController {
         return ResponseEntity.ok(Collections.emptyList());
     }
 
+    @GetMapping("/all")
+    public ResponseEntity<List<Student>> getAllStudents() {
+        List<Student> students = studentService.findAllStudents();
+        return ResponseEntity.ok(students);
+    }
+
+
     @PostMapping(value = "/{id}/avatar", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<String> uploadAvatar(@PathVariable Long id, @RequestParam MultipartFile avatar) throws IOException {
         if (avatar.getSize() > 1024 * 300) {
@@ -113,4 +121,29 @@ public class StudentController {
         }
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping("/count")
+    public ResponseEntity<Long> getTotalStudentCount() {
+        Long count = studentService.getTotalStudentCount();
+        return ResponseEntity.ok(count);
+    }
+
+    @GetMapping("/avgage")
+    public ResponseEntity<Double> getAvgAgeOfStudents() {
+        double avgAge = studentService.getAvgAgeOfStudents();
+        return ResponseEntity.ok(avgAge);
+    }
+
+    @GetMapping("/lastfive")
+    public ResponseEntity<Collection<Student>> getLastFiveStudents() {
+        Collection<Student> lastFive = studentService.getLastFiveStudents();
+        return ResponseEntity.ok(lastFive);
+    }
+
+    @GetMapping("/avatar")
+    public ResponseEntity<Collection<Avatar>> getAllAvatars(@RequestParam("page") Integer pageNumber, @RequestParam("size") Integer pageSize) {
+        Collection<Avatar> avatars = avatarService.getAllAvatars(pageNumber, pageSize);
+        return ResponseEntity.ok(avatars);
+    }
+
 }

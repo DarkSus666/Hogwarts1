@@ -12,6 +12,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.List;
 
 import static java.nio.file.StandardOpenOption.CREATE_NEW;
 
@@ -35,6 +36,10 @@ public class StudentService {
 
     public Student findStudent(long id) {
         return studentRepository.findById(id).get();
+    }
+
+    public List<Student> findAllStudents() {
+        return studentRepository.findAll();
     }
 
     public Student editStudent(Student student) {
@@ -84,5 +89,17 @@ public class StudentService {
 
     private String getExtension(String fileName) {
         return fileName.substring(fileName.lastIndexOf(".") + 1);
+    }
+
+    public Long getTotalStudentCount() {
+        return studentRepository.countAllStudents();
+    }
+
+    public Double getAvgAgeOfStudents() {
+        return studentRepository.getAvgAgeOfStudents();
+    }
+
+    public Collection<Student> getLastFiveStudents() {
+        return studentRepository.getLastFiveStudents();
     }
 }
