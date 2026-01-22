@@ -1,0 +1,58 @@
+2026-01-23T00:13:09.457+03:00  INFO 87188 --- [school] [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 25.0.1 with PID 87188 (/Users/DarkSus/Downloads/school/target/classes started by DarkSus in /Users/DarkSus/Downloads/school)
+2026-01-23T00:13:09.469+03:00 DEBUG 87188 --- [school] [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.5.8, Spring v6.2.14
+2026-01-23T00:13:09.470+03:00  INFO 87188 --- [school] [main] ru.hogwarts.school.SchoolApplication     : The following 1 profile is active: "dev"
+2026-01-23T00:13:11.171+03:00  INFO 87188 --- [school] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-23T00:13:11.315+03:00  INFO 87188 --- [school] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 3 JPA repository interfaces.
+2026-01-23T00:13:12.411+03:00  INFO 87188 --- [school] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-01-23T00:13:12.464+03:00  INFO 87188 --- [school] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-23T00:13:12.465+03:00  INFO 87188 --- [school] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-01-23T00:13:12.616+03:00  INFO 87188 --- [school] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-23T00:13:12.616+03:00  INFO 87188 --- [school] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3033 ms
+2026-01-23T00:13:12.989+03:00  INFO 87188 --- [school] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-23T00:13:13.397+03:00  INFO 87188 --- [school] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d30007d
+2026-01-23T00:13:13.401+03:00  INFO 87188 --- [school] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-23T00:13:13.912+03:00  INFO 87188 --- [school] [main] liquibase.database                       : Set default schema name to public
+2026-01-23T00:13:14.565+03:00  INFO 87188 --- [school] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-01-23T00:13:14.686+03:00  INFO 87188 --- [school] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-01-23T00:13:14.689+03:00  INFO 87188 --- [school] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-01-23T00:13:14.724+03:00  INFO 87188 --- [school] [main] liquibase.util                           : UPDATE SUMMARY
+2026-01-23T00:13:14.725+03:00  INFO 87188 --- [school] [main] liquibase.util                           : Run:                          0
+2026-01-23T00:13:14.725+03:00  INFO 87188 --- [school] [main] liquibase.util                           : Previously run:               2
+2026-01-23T00:13:14.728+03:00  INFO 87188 --- [school] [main] liquibase.util                           : Filtered out:                 0
+2026-01-23T00:13:14.729+03:00  INFO 87188 --- [school] [main] liquibase.util                           : -------------------------------
+2026-01-23T00:13:14.729+03:00  INFO 87188 --- [school] [main] liquibase.util                           : Total change sets:            2
+2026-01-23T00:13:14.732+03:00  INFO 87188 --- [school] [main] liquibase.util                           : Update summary generated
+2026-01-23T00:13:14.739+03:00  INFO 87188 --- [school] [main] liquibase.command                        : Command execution complete
+2026-01-23T00:13:15.932+03:00  INFO 87188 --- [school] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-23T00:13:16.161+03:00  INFO 87188 --- [school] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.36.Final
+2026-01-23T00:13:16.287+03:00  INFO 87188 --- [school] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-23T00:13:17.400+03:00  INFO 87188 --- [school] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-23T00:13:17.670+03:00  INFO 87188 --- [school] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-23T00:13:20.270+03:00  INFO 87188 --- [school] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-23T00:13:20.556+03:00  INFO 87188 --- [school] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-23T00:13:22.666+03:00 DEBUG 87188 --- [school] [main] r.h.school.service.FacultyService        : FacultyService создан
+2026-01-23T00:13:23.134+03:00  INFO 87188 --- [school] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-23T00:13:23.307+03:00 DEBUG 87188 --- [school] [main] r.h.school.service.StudentService        : StudentService создан
+2026-01-23T00:13:23.459+03:00 DEBUG 87188 --- [school] [main] r.hogwarts.school.service.AvatarService  : AvatarService создан
+2026-01-23T00:13:24.564+03:00  WARN 87188 --- [school] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-23T00:13:25.905+03:00  INFO 87188 --- [school] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-01-23T00:13:25.924+03:00  INFO 87188 --- [school] [main] ru.hogwarts.school.SchoolApplication     : Started SchoolApplication in 17.352 seconds (process running for 17.826)
+2026-01-23T00:13:42.622+03:00  INFO 87188 --- [school] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23T00:13:42.623+03:00  INFO 87188 --- [school] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-23T00:13:42.627+03:00  INFO 87188 --- [school] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-01-23T00:13:44.257+03:00  INFO 87188 --- [school] [http-nio-8081-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 658 ms
+2026-01-23T00:13:58.169+03:00  INFO 87188 --- [school] [http-nio-8081-exec-2] r.h.school.controller.InfoController     : Was invoked method for get port
+2026-01-23T00:13:58.170+03:00 DEBUG 87188 --- [school] [http-nio-8081-exec-2] r.h.school.controller.InfoController     : Current server port: 8081
+2026-01-23T00:13:58.172+03:00  INFO 87188 --- [school] [http-nio-8081-exec-2] r.h.school.controller.InfoController     : Returning server port: 8081
+2026-01-23T00:15:11.108+03:00  INFO 87188 --- [school] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-23T00:15:11.117+03:00  INFO 87188 --- [school] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-23T00:15:11.124+03:00  INFO 87188 --- [school] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-23T00:15:11.132+03:00  INFO 87188 --- [school] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-23T00:15:11.138+03:00  INFO 87188 --- [school] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
