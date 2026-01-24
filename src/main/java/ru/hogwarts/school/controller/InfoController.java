@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class InfoController {
 
-    Logger logger = LoggerFactory.getLogger(InfoController.class);
+    private final Logger logger = LoggerFactory.getLogger(InfoController.class);
 
     @Value("${server.port}")
     private Integer serverPort;
