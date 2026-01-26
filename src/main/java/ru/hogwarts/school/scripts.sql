@@ -15,3 +15,12 @@ select * from student where age < id;
 select * from student order by age;
 
 select * from student as s, faculty as f where s.faculty_id = f.id
+
+
+ALTER TABLE student ALTER COLUMN id SET DEFAULT nextval('student_id_seq');
+
+
+CREATE SEQUENCE IF NOT EXISTS student_id_seq START WITH 1 INCREMENT BY 1;
+ALTER TABLE student ALTER COLUMN id SET DEFAULT nextval('student_id_seq');
+
+SELECT setval('student_id_seq', COALESCE((SELECT MAX(id) FROM student), 0) + 1);
